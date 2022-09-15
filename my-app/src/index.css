@@ -1,6 +1,10 @@
 body {
-  background-color: rgb(41, 8, 71);
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(41, 8, 71);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,4 +20,46 @@ code {
 h1 {
   text-align: center;
   color:aliceblue
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 100px;
+  appearance: none;
+  background-color: #DAE2DF;
+  border-radius: 50px;
+  box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  transition: .4s;
+  position: relative;
+}
+
+input:checked[type='checkbox'] {
+  background-color: #3DECB1;
+}
+
+input[type="checkbox"]:before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  background-color: #EDF3F1;
+  border-radius: 50px;
+  position: absolute;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
+  top: 0;
+  left: 0;
+  transition: .4s;
+}
+
+input:checked[type="checkbox"]:before {
+  left: 100px;
 }
